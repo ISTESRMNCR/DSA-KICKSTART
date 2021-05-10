@@ -10,8 +10,3 @@
 
 # Assignment Submission Due Date:alarm_clock:
 **15th MAY , 12:00 AM**
-
-# How to Contribute your assignment.:thinking:
-* create a folder with your name on your Desktop.
-* Paste all the .cpp or any language extention file in that folder.
-* Now open this repository, and click add files -> upload files -> Drag that folder to the box done!! -> commit changes .
