@@ -15,3 +15,4 @@
 * Follow the naming convention *firstname-lastname*
 * For questions, example : *q1* for Question 1
 * For questions execution screenshot, example : *q1-image* for Question 1 Image
+* Do not edit/remove any other files
