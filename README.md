@@ -9,7 +9,7 @@
 * Q5.Stack using two queues   [LINK](https://practice.geeksforgeeks.org/problems/stack-using-two-queues/1)</li>
 
 # Assignment Submission Due Date:alarm_clock:
-**15th MAY , 12:00 AM**
+**11:59pm, 14th May 2021**
 
 # Rules :exclamation:
 * Follow the naming convention *firstname-lastname*
