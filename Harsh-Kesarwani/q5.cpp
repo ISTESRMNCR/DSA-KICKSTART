@@ -69,6 +69,6 @@ int QueueStack ::pop()
         q1.pop();
         return val;
     }
-    return -9999;
+    return -1;
 }
 //
