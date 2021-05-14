@@ -1,42 +1,78 @@
- #include<iostream>
+#include <bits/stdc++.h>
 using namespace std;
- bool ispar(string x)
-    { char ch;
-     int l=x.length();
-     int max=l;
-     int top=-1;
-     int s[max];
-     for(int i=0;i<l;i++)
-     {
-         if(x[i]=='('||x[i]=='{'||x[i]=='[')
-         {s[++top]=x[i];
-         continue;}
-         if(top==-1)
-         return false;
-         switch(x[i])
-         {
-         case ')':
-         ch=s[top];
-         --top;
-         if( ch== '{'||ch== '[')
-         return false;
-         break;
-         case '}':
-          ch=s[top];
-         --top;
-         if( ch=='['||ch=='(')
-         return false;
-         break;
-         case ']':
-          ch=s[top];
-         --top;
-         if( ch=='('||ch=='{')
-         return false;
-         break;
-     }
-     }
-     if(top<0)
-     return true;
-     else 
-     return false;
-     }
+
+struct Node {
+  int data;
+  struct Node *next;
+  Node(int x) {
+    data = x;
+    next = NULL;
+  }
+};
+
+
+void print(Node *root)
+{
+    Node *temp = root;
+    while(temp!=NULL)
+    {
+    cout<<temp->data<<" ";
+    temp=temp->next;
+    }
+}
+Node* removeDuplicates(Node *root);
+int main() {
+	// your code goes here
+	int T;
+	cin>>T;
+
+	while(T--)
+	{
+		int K;
+		cin>>K;
+		Node *head = NULL;
+        Node *temp = head;
+
+		for(int i=0;i<K;i++){
+		int data;
+		cin>>data;
+			if(head==NULL)
+			head=temp=new Node(data);
+			else
+			{
+				temp->next = new Node(data);
+				temp=temp->next;
+			}
+		}
+		
+		Node *result  = removeDuplicates(head);
+		print(result);
+		cout<<endl;
+	}
+	return 0;
+}// } Driver Code Ends
+
+
+/*
+struct Node {
+  int data;
+  struct Node *next;
+  Node(int x) {
+    data = x;
+    next = NULL;
+  }
+};*/
+
+//Function to remove duplicates from sorted linked list.
+Node *removeDuplicates(Node *head)
+{Node* temp=head;
+ if(!temp)return NULL;
+ while(temp->next!=NULL)
+ { if(temp->data==temp->next->data)
+     temp->next=temp->next->next;
+ else
+ temp=temp->next;
+   
+         }
+         return head;
+         }
